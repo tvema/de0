@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <stdio.h>
+
 #include <iostream>
 
 #include <pthread.h>
@@ -31,7 +34,7 @@ int main(void) {
 	std::cout << "Program debugging ok...." << std::endl;
 
 	pthread_mutex_unlock(&lock);
-	pthread_joint(t, NULL);
+	pthread_join(t, NULL);
 	pthread_mutex_destroy(&lock);
 
 	MainTest *mt = new MainTest();

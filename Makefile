@@ -8,7 +8,8 @@ HDR := $(wildcard src/*.h)
 OBJ := main.o
 OBJ += $(patsubst src/%.cpp, obj/%.o, $(wildcard src/*.cpp))
 
-GCC := arm-linux-gnueabihf-g++
+# GCC := arm-linux-gnueabihf-g++
+GCC := g++
 
 CFLAGS := -g3 -Wall
 
